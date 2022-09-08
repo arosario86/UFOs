@@ -1,3 +1,5 @@
+const tableData = data;
+let tbody = d3.select('tbody');
 function buildTable(data) {
     // First, clear out any existing data
     tbody.html("");
@@ -23,6 +25,7 @@ function buildTable(data) {
     let date = d3.select("#datetime").property("value");
     let filteredData = tableData;
   
+  
      // Check to see if a date was entered and filter the
     // data using that date.
     if (date) {
@@ -42,3 +45,4 @@ function buildTable(data) {
   
   // Build the table when the page loads
   buildTable(tableData);
+  
